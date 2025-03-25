@@ -1,0 +1,72 @@
+.container {
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.backButton {
+  align-self: flex-start;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.backButton:hover {
+  background-color: #666;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.posterWrapper {
+  flex: 0 0 300px;
+}
+
+.poster {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.info {
+  flex: 1;
+  max-width: 600px;
+}
+
+.title {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.year,
+.genres,
+.countries,
+.rating {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 16px;
+  margin-top: 20px;
+  line-height: 1.5;
+}
+
+.loading,
+.error {
+  color: #ccc;
+  text-align: center;
+  font-size: 20px;
+}
