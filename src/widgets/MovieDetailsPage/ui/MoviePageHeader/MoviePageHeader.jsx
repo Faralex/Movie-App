@@ -1,9 +1,8 @@
-import SearchBar from "../../../../features/SearchBar/ui/SearchBar";
-import MovieFilters from "../../../../features/MovieFiltes/ui/MovieFilters";
+import { MovieFilters } from "../../../../features/MovieFilters";
+import { SearchBar } from "../../../../features/SearchBar/Index";
+import styles from "./MoviePageHeader.module.css";
 
-import styles from "./MovieListHeader.module.css";
-
-const MovieListHeader = ({
+const MoviePageHeader = ({
   query,
   loading,
   handleSearch,
@@ -40,4 +39,4 @@ const MovieListHeader = ({
   );
 };
 
-export default MovieListHeader;
+export default MoviePageHeader;

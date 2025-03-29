@@ -1,17 +1,17 @@
 import { useSearchParams } from "react-router-dom";
 import useGenresFilter from "../../../../entities/Movie/hooks/useGenresFilter.js";
 import useFetchMovies from "../../../../entities/Movie/hooks/useFetchMovies.js";
-import usePagination from "../../../../entities/Movie/hooks/usePagination.js";
-import useSyncSearchParams from "../../../../entities/Movie/hooks/useSyncSearchParams.js";
+import usePagination from "../../../../shared/hooks/usePagination.js";
+import useSyncSearchParams from "../../../../shared/hooks/useSyncSearchParams.js";
 import useYearsFilter from "../../../../entities/Movie/hooks/useYearsFilter.js";
 import useSearchFilter from "../../../../entities/Movie/hooks/useSearchFilter.js";
-import useDebounce from "../../../../entities/Movie/hooks/useDebounce.js";
-import MovieListContent from "../MovieListContent/MovieListContent.jsx";
-import MovieListHeader from "../MovieListHeader/MovieListHeader.jsx";
+import useDebounce from "../../../../shared/hooks/useDebounce.js";
+import MoviePageContent from "../MoviePageContent/MoviePageContent.jsx";
+import MoviePageHeader from "../MoviePageHeader/MoviePageHeader.jsx";
 
-import styles from "./MovieList.module.css";
+import styles from "./MoviePage.module.css";
 
-const MovieList = () => {
+const MoviePage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
 
   const queryParam = searchParams.get("query") || "";
@@ -56,7 +56,7 @@ const MovieList = () => {
 
   return (
     <div className={styles.container}>
-      <MovieListHeader
+      <MoviePageHeader
         query={query}
         loading={loading}
         handleSearch={handleSearch}
@@ -77,7 +77,7 @@ const MovieList = () => {
         }}
       />
 
-      <MovieListContent
+      <MoviePageContent
         loading={loading}
         error={error}
         movies={movies}
@@ -93,4 +93,4 @@ const MovieList = () => {
   );
 };
 
-export default MovieList;
+export default MoviePage;

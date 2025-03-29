@@ -1,11 +1,10 @@
 import { useParams } from "react-router-dom";
 import useFetchMovieById from "../../../entities/Movie/hooks/useFetchMovieById";
-import MoviePoster from "../../../entities/Movie/ui/MoviePoster/MoviePoster";
-import MovieInfo from "../../../entities/Movie/ui/MovieInfo/MovieInfo";
+import { MoviePoster, MovieInfo } from "../../../entities/Movie/ui";
 import BackButton from "../../../shared/ui/BackButton/BackButton";
-import styles from "./MoviePage.module.css";
+import styles from "./MoviesPage.module.css";
 
-const MoviePage = () => {
+const MoviesPage = () => {
   const { id } = useParams();
 
   const { movie, loading, error } = useFetchMovieById(id);
@@ -35,4 +34,4 @@ const MoviePage = () => {
   );
 };
 
-export default MoviePage;
+export default MoviesPage;
